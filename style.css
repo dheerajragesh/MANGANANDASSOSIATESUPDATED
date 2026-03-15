@@ -397,3 +397,8 @@ margin-top:40px;
   width: 100%;
   padding: 20px 0;
 }
+@media (min-width: 992px) {
+  .context {
+    padding-left: 10% !important;
+  }
+}
