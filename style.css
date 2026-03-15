@@ -56,20 +56,23 @@
     display: block;
 }
 .hero-image{
-    background-image: linear-gradient(rgb(0,0,0,0.4),rgba(0,0,0,0.4)),url('images/Rectangle\ 3\ \(1\).png');
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("images/Rectangle 3 (1).png");
     background-size: cover;
     background-position: center;
-    height: clamp(300px, 700px, 1000px);
-    max-width:100%;
-    color:white;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    color: white;
 }
+
 .hero-title{
     font-weight: 600;
     letter-spacing: clamp(0.04em, 0.2vw, 0.12em);
-    font-size:clamp(18px,58px,78px);
-    margin-left:clamp(40px, 80px, 120px);
-    margin-bottom:clamp(30px, 40px, 50px);
-    line-height: clamp(20px,80px,120px);
+    /* max-width: 525px; */
+     font-size:(12px,58px,78px); 
+     margin-left:clamp(40px, 80px, 120px);
+    margin-bottom:clamp(10px, 40px, 50px);
+    line-height: clamp(5px,80px,120px); 
 }
 .btn-teal{
     background-color: #64C6C2;
@@ -81,18 +84,13 @@
     height: 44px;
 }
 
-.section-spacing{
-    margin-left:400px;
-    margin-right:400px;
-    margin-top:100px;
-    margin-bottom:100px;
-    gap: clamp(12px, 20px, 40px);
+.section-width{
+  max-width: 800px;   
+  width: 100%;        
 }
+
 .hr-line{
-    flex-grow: 1;     
-    flex-shrink: 0;    
-    border: 2px solid #8b8e8d;
-    opacity: 1;
+  width: 60px;
 }
 
 .text-custom{
@@ -107,23 +105,30 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 275; 
 }
- .image-div {
-      background-image: url('images/Rectangle\ 4\ \(1\).png');
-      background-size: cover;
-      background-position: center;
-      width:clamp(200px, 800px, 1200px);   
-      height:clamp(300px, 500px, 700px);  
-      flex-shrink: 0; 
-    }
-    .text-div {
-      display: flex;
-      flex-direction: column; 
-      justify-content: center;
-      padding:clmap(10px, 20px, 30px);
-      height:clamp(100px, 300px, 500px);
-      margin-top:clamp(40px, 120px, 200px);
-      text-align: left;
-    }
+ .about-section{
+  max-width:1500px;
+  margin-left:0;
+}
+
+.about-wrapper{
+  min-height:509px;
+}
+
+.image-div{
+  background-image:url("images/Rectangle 4 (1).png");
+  background-size:cover;
+  background-position:center;
+  min-height:509px;
+}
+
+.about-title{
+  font-size:clamp(20px,30px,40px);
+}
+
+.about-btn{
+  margin-top:clamp(10px,20px,30px);
+}
+    
 
     .text-div h1 {
       font-size: var(--fs-h2);
@@ -146,7 +151,7 @@
     color: #fff;
     border-radius: 25px;
     padding: 10px 30px;
-    font-weight: bold;
+    font-weight: normal;
     height: 44px;
     width:clamp(90px, 120px, 160px);
     margin-left:clamp(0px, 5px, 10px);
@@ -160,7 +165,7 @@
         max-width: 1200px;   
     }
 .service-img {
-    width:clamp(180px, 480px, 780px);
+    width:clamp(10px, 480px, 780px);
     height: 521px;
     object-fit: cover;
     display: block;
@@ -177,7 +182,6 @@ body {
 img {
   max-width: 100%;
   height: auto;
-}
 }
 
 .hero-img-bg {
@@ -337,12 +341,14 @@ margin-top:40px;
   line-height: 1.6;
 }
 .contact{
-  position: absolute;left: 700px;
+  position: absolute;
+  left: 40%;
   background-color: #F8F9FA;
   margin-top:clamp(100px, 200px ,300px);
   max-width: 40%;
   padding:clamp( 20px, 80px,120px);
 }
+
 
 .Contact p {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
@@ -359,4 +365,35 @@ margin-top:40px;
 .Contact .contact-icon,
 .Contact .contact-arrow {
   flex: 0 0 auto;
+}
+@media (max-width: 991.98px) { 
+  .contact {
+    position: static;   
+    left: auto;         
+    margin-top: 20px;   
+    max-width: 100%;    
+    padding: 20px;  
+    margin-left: auto;    
+  }
+}
+.text-style {
+  font-size: clamp(12px, 2.5vw, 28px);
+  white-space: nowrap; 
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hr-line {
+  flex-grow: 1; 
+  max-width: 100px; 
+  min-width: 20px;  
+  border: none;
+  border-top: 1px solid #b2acac; 
+  opacity: 1;
+  margin: 0; 
+}
+
+.responsive-status-bar {
+  width: 100%;
+  padding: 20px 0;
 }
