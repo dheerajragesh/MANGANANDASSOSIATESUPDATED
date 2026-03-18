@@ -5,8 +5,14 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
 </head>
 <body>
+  
    <header>
 
   <div class="text-white py-2" style="background-color:rgba(26, 43, 86, 1) ;">
@@ -69,7 +75,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </header>
-    <section class="hero-image d-flex align-items-center" >
+    <section class="hero-image  d-flex align-items-center" >
         <div class="container">
             <div class="row">
                 <div class="col-lg-6col-md-8">
@@ -191,8 +197,6 @@
         </p>
       </div>
     </div>
-
-
     <div class="col-lg-6"
          style="background: url('images/Rectangle 22.png') center/cover no-repeat; min-height:300px;">
     </div>
@@ -204,8 +208,7 @@
     <h2 class="mb-5" style="font-family: serif; font-size: clamp(24px, 5vw, 40px);">Testimonials</h2>
 
     <div class="row align-items-center justify-content-center">
-      
-      <div class="col-12 col-lg-10">
+      <div class="col-12 col-lg-10 position-relative">
         
         <div class="d-flex align-items-center justify-content-start gap-3 mb-3 ms-md-5">
           <img src="images/Ellipse 2 (1).png" class="testimonial-avatar rounded-circle border border-4 border-white shadow-sm" alt="User" width="80" height="80">
@@ -217,17 +220,32 @@
 
         <div class="p-4 p-md-5 shadow-sm bg-white mx-auto position-relative" style="max-width: 850px; border-radius: 10px;">
           
-          <a href="#" class="d-none d-lg-block position-absolute text-decoration-none text-dark fw-light" style="left: -100px; top: 50%; transform: translateY(-50%);">
+          <span class="display-5 text-info position-absolute" style="top: 10px; left: 20px; opacity: 0.3; font-size:clamp(80px, 120px, 180px); pointer-events: none;">“</span>
+
+          <div class="myslide">
+            <div>
+              <p class="text-muted lh-lg mt-3 text-start" style="font-size: clamp(14px, 18px, 24px);">
+                Tom has been my go-to recruitment partner since I met him in 2015. His strong investment and superannuation industry knowledge is a core asset.
+              </p>
+            </div>
+            
+            <div>
+              <p class="text-muted lh-lg mt-3 text-start" style="font-size: clamp(14px, 18px, 24px);">
+                Coupled with his extensive professional network, it is a very strong combination to source high-performance results for both organisations and job seekers.
+              </p>
+            </div>
+            
+            <div>
+              <p class="text-muted lh-lg mt-3 text-start" style="font-size: clamp(14px, 18px, 24px);">
+                He has very strong relationship and interpersonal skills. I will continue to highly recommend him to both hiring managers and candidates alike.
+              </p>
+            </div>
+          </div>
+
+          <a href="javascript:void(0);" class="slick-prev-btn d-none d-lg-block position-absolute text-decoration-none text-dark fw-light" style="left: -100px; top: 50%; transform: translateY(-50%);">
             &lt; PREV
           </a>
-
-          <span class="display-5 text-info position-absolute" style="top: 10px; left: 20px; opacity: 0.3; font-size: 80px;">“</span>
-          <p class="text-muted lh-lg mt-3 text-start">
-            Tom has been my go-to recruitment partner since I met him in 2015. His strong investment and superannuation industry 
-            knowledge coupled with his extensive professional network is a very strong combination to source high-performance results.
-          </p>
-
-          <a href="#" class="d-none d-lg-block position-absolute text-decoration-none text-dark fw-light" style="right: -100px; top: 50%; transform: translateY(-50%);">
+          <a href="javascript:void(0);" class="slick-next-btn d-none d-lg-block position-absolute text-decoration-none text-dark fw-light" style="right: -100px; top: 50%; transform: translateY(-50%);">
             NEXT &gt;
           </a>
         </div>
@@ -235,20 +253,36 @@
 
       <div class="col-12 d-lg-none mt-4">
         <div class="d-flex justify-content-center gap-5">
-          <a href="#" class="text-decoration-none text-dark fw-light" style="letter-spacing: 1px;">&lt; PREV</a>
-          <a href="#" class="text-decoration-none text-dark fw-light" style="letter-spacing: 1px;">NEXT &gt;</a>
+          <a href="javascript:void(0);" class="slick-prev-btn text-decoration-none text-dark fw-light" style="letter-spacing: 1px; font-size: 16px;">&lt; PREV</a>
+          <a href="javascript:void(0);" class="slick-next-btn text-decoration-none text-dark fw-light" style="letter-spacing: 1px; font-size: 16px;">NEXT &gt;</a>
         </div>
       </div>
 
     </div>
 
     <div class="mt-5">
-      <a href="#" class="btn btn-info text-white rounded-pill px-4 py-2" style="background-color: #64C6C2; border: none;">
+      <a href="#" class="btn btn-info text-white rounded-pill px-5 py-2" style="background-color: #64C6C2; border: none; font-weight: 500;">
         VIEW ALL TESTIMONIALS
       </a>
     </div>
   </div>
 </section>
+
+
+<script>
+$(document).ready(function(){
+  $('.myslide').slick({
+    dots: false,
+    infinite: true,
+    speed: 500,
+    fade: true, // Makes text transition smoother than sliding
+    cssEase: 'linear',
+    prevArrow: $('.slick-prev-btn'),
+    nextArrow: $('.slick-next-btn'),
+    adaptiveHeight: true
+  });
+});
+</script>
    <section class="news-section" style="background-color: #eaf5f1;">
         <h2 class="title text-center fs-1 fw-light" style="padding-top: 109px;">News/Blog </h2>
         <div class="container mt-5" style="padding-bottom: 113px;">
@@ -370,3 +404,6 @@
     </div>
   </div>
 </footer>
+
+</body>
+</html>

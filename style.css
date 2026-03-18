@@ -57,7 +57,8 @@
 }
 .hero-image{
     background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("images/Rectangle 3 (1).png");
-    background-size: cover;
+    /* background-size: cover; */
+    background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     height: 100vh;
@@ -86,7 +87,7 @@
 
 .section-width{
   max-width: 800px;   
-  width: 100%;        
+  /* width: 100%;         */
 }
 
 .hr-line{
@@ -116,7 +117,7 @@
 
 .image-div{
   background-image:url("images/Rectangle 4 (1).png");
-  background-size:cover;
+  background-size:100% 100%;
   background-position:center;
   min-height:509px;
 }
@@ -399,6 +400,41 @@ margin-top:40px;
 }
 @media (min-width: 992px) {
   .context {
-    padding-left: 10% !important;
+    padding-left: 10% ;
+  }
+  .image-div{
+    padding:clamp( 10px,50px,100p);
+  }
+}
+/* Styling the counter */
+.testimonial-counter {
+  letter-spacing: 2px;
+  color: #64C6C2 !important; /* Matches your button color */
+}
+
+/* Responsive adjustment for the container */
+@media (max-width: 576px) {
+  /* Shrink the overall card padding so it fits small screens better */
+  .testimonial-card {
+    padding: 1.5rem !important; 
+    margin: 0 10px;
+  }
+
+  /* Make the text slightly smaller for mobile users */
+  .testimonial-card p {
+    font-size: 15px !important;
+    line-height: 1.6;
+  }
+
+  /* Shrink the avatar header section */
+  .testimonial-avatar {
+    width: 60px !important;
+    height: 60px !important;
+  }
+
+  /* Position the counter slightly lower on mobile */
+  .testimonial-counter {
+    font-size: 12px;
+    margin-bottom: 5px;
   }
 }
