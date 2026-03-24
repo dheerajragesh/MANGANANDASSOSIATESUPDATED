@@ -90,12 +90,12 @@
 }
 
 .hr-line{
-  width: 60px;
+ max-width: 60px;
 }
 
 .text-custom{
     color:#565656;
-    font-size: clamp(20px,32px,42px);
+    font-size: clamp(10px,32px,42px);
 }
 
 .text-style{
@@ -118,7 +118,7 @@
   background-image:url("images/Rectangle 4 (1).png");
   background-size:100% 100%;
   background-position:center;
-  min-height:509px;
+  min-height: 509px;
 }
 .about-title{
   font-size:clamp(20px,30px,40px);
@@ -534,4 +534,30 @@ margin-top:40px;
 
   /* Position the counter slightly lower on mobile */
   .testimonial-counter {
-    font-size: 12px
+    font-size: 12px;
+  }
+  /* Center the dots and remove list styling */
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+/* Style the individual dots */
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ccc; /* Inactive color */
+  border: none;
+  cursor: pointer;
+  transition:cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+}

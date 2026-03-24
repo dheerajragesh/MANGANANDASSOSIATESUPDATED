@@ -173,10 +173,10 @@
          style="background: url('images/Rectangle 21 (1).png') center/cover no-repeat; min-height:400px;">
       <div class="w-100 p-5">
         <h2 class="fw-light lh-lg mb-3 values-text"
-            style="font-size: clamp(20px, 36px, 50px); width:clamp(200px, 360px, 500px);">
+            style="font-size: clamp(15px, 36px, 50px); width:clamp(10px, 360px, 500px);">
           Equality Diversity And Inclusion
         </h2>
-        <p class="fw-light lh-lg values-text">
+        <p class="fw-light lh-lg values-text" style="font-size: clamp(12px,16px,20px);">
           At Mangan & Associates, equality, diversity and inclusion aren't just words; they're values.
           Values that guide how we build our company and how we help our clients build theirs.
           Different backgrounds, skills, views, and lived experiences strengthen teams and fuel
@@ -206,7 +206,7 @@
           </div>
         </div>
         <div class="testimonial-card p-4 p-md-5 shadow-sm bg-white mx-auto position-relative" style="max-width: 850px; border-radius: 10px;">
-          <span class="display-5 text-info position-absolute" style="top: 10px; left: 20px; opacity: 0.3; font-size:clamp(80px, 120px, 180px); pointer-events: none;">“</span>
+          <span class="display-5 text-info position-absolute" style="top: 10px; left: 20px; opacity: 0.3; font-size:clamp(20px, 120px, 180px); pointer-events: none;">“</span>
           <div>
             <div>
               <p class="text-muted lh-lg mt-3 text-start testimonial-text">
@@ -228,7 +228,7 @@
         </div>
         <div class="testimonial-card p-4 p-md-5 shadow-sm bg-white mx-auto position-relative" style="max-width: 850px; border-radius: 10px;">
           
-          <span class="display-5 text-info position-absolute" style="top: 10px; left: 20px; opacity: 0.3; font-size:clamp(80px, 120px, 180px); pointer-events: none;">“</span>
+          <span class="display-5 text-info position-absolute" style="top: 10px; left: 20px; opacity: 0.3; font-size:clamp(20px, 120px, 180px); pointer-events: none;">“</span>
 
           <div>
             <div>
@@ -251,7 +251,7 @@
         </div>
 
         <div class="testimonial-card p-4 p-md-5 shadow-sm bg-white mx-auto position-relative" style="max-width: 850px; border-radius: 10px;">
-          <span class="display-5 text-info position-absolute" style="top: 10px; left: 20px; opacity: 0.3; font-size:clamp(80px, 120px, 180px); pointer-events: none;">“</span>
+          <span class="display-5 text-info position-absolute" style="top: 10px; left: 20px; opacity: 0.3; font-size:clamp(20px, 120px, 180px); pointer-events: none;">“</span>
           <div>
             <div>
               <p class="text-muted lh-lg mt-3 text-start testimonial-text">
@@ -264,20 +264,26 @@
         </div>
         </div>
         </div>
-         <a href="javascript:void(0);" class="slick-prev-btn d-none d-lg-block position-absolute text-decoration-none text-dark fw-light" style="left: -100px; top: 50%; transform: translateY(-50%);">
-            &lt; PREV
-          </a>
-          <a href="javascript:void(0);" class="slick-next-btn d-none d-lg-block position-absolute text-decoration-none text-dark fw-light" style="right: -100px; top: 50%; transform: translateY(-50%);">
-            NEXT &gt;
-          </a>
+         <a href="javascript:void(0);" class="slick-prev-btn d-none d-lg-flex position-absolute text-decoration-none text-dark fw-light" style="left: -80px; top: 50%; transform: translateY(-50%);">
+          &lt; PREV
+        </a>
+        <a href="javascript:void(0);" class="slick-next-btn d-none d-lg-flex position-absolute text-decoration-none text-dark fw-light" style="right: -80px; top: 50%; transform: translateY(-50%);">
+          NEXT &gt;
+        </a>
       </div>
-      <div class="col-12 d-lg-none mt-4">
-        <div class="d-flex justify-content-center gap-5">
-          <a href="javascript:void(0);" class="slick-prev-btn text-decoration-none text-dark fw-light" style="letter-spacing: 1px; font-size: 16px;">&lt; PREV</a>
-          <a href="javascript:void(0);" class="slick-next-btn text-decoration-none text-dark fw-light" style="letter-spacing: 1px; font-size: 16px;">NEXT &gt;</a>
+
+      <!-- <div class="col-12 d-block d-lg-none mt-4">
+        <div class="d-flex justify-content-center align-items-center ">
+          <a href="javascript:void(0);" class="slick-prev-btn">
+            <img src="images/dot-svgrepo-com.png" alt="Previous" width="30%" height="30%" style="object-fit: contain;">
+          </a>
+          <a href="javascript:void(0);" class="slick-next-btn">
+            <img src="images/dot-svgrepo-com.png" alt="Next" width="30%" height="30%" style="object-fit: contain;">
+          </a>
         </div>
-      </div>
+      </div>-->
     </div>
+
     <div class="mt-5">
       <a href="#" class="btn btn-info text-white rounded-pill px-5 py-2" style="background-color: #64C6C2; border: none; font-weight: 500;">
         VIEW ALL TESTIMONIALS
@@ -289,14 +295,25 @@
 <script>
 $(document).ready(function(){
   $('.myslide').slick({
-    dots: false,
+    dots: false, // Hidden by default on desktop
     infinite: true,
     speed: 500,
     fade: false,
     cssEase: 'linear',
+    // This allows both the desktop text and mobile images to trigger the slide
     prevArrow: $('.slick-prev-btn'),
     nextArrow: $('.slick-next-btn'),
-    adaptiveHeight: true
+    adaptiveHeight: true,
+    swipe: true, // Enables touch swipe
+    responsive: [
+      {
+        breakpoint: 992, // Target screens smaller than 992px (Mobile/Tablet)
+        settings: {
+          dots: true, // Shows the three dots
+          arrows: true // Keeps your image arrows working
+        }
+      }
+    ]
   });
 });
 </script>
